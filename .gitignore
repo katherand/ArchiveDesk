@@ -12,3 +12,4 @@ env/
 # Ignore local OS metadata clutter
 .DS_Store
 Thumbs.db
+extractData.py
