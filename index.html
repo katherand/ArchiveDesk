@@ -105,21 +105,24 @@
         <div class="counter" id="resultCount">Loading repository index...</div>
         
         <div class="grid" id="archiveGrid"></div>
+
+        <div style="text-align: center; margin: 40px 0; display: flex; justify-content: center; gap: 15px; align-items: center;">
+            <button id="prevBtn" class="btn-request" style="margin-top:0; background-color: #86868b;" onclick="changePage(-1)">← Previous</button>
+            <span id="pageIndicator" class="meta" style="font-weight: 600;">Page 1</span>
+            <button id="nextBtn" class="btn-request" style="margin-top:0;" onclick="changePage(1)">Next →</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+            <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" style="color: #0071e3; text-decoration: none; font-size: 0.9rem; font-weight: 500;">↑ Back to Top</a>
+        </div>
+
+        <footer style="margin-top: 40px; margin-bottom: 20px; text-align: center; font-size: 0.75rem; font-family: monospace; opacity: 0.5; color: inherit;">
+    <span>System Reference: DAT-PPL-06 // <a href="https://katherand.github.io/katherand/" style="text-decoration: underline; color: inherit;">[Exit System // View Portfolio Hub]</a></span>
+</footer>
     </div>
-        <div class="grid" id="archiveGrid"></div>
-
-        <div style="text-align: center; margin: 30px 0; display: flex; justify-content: center; gap: 15px; align-items: center;">
-          <button id="prevBtn" class="btn-request" style="margin-top:0; background-color: #86868b;" onclick="changePage(-1)">← Previous</button>
-          <span id="pageIndicator" class="meta" style="font-weight: 600;">Page 1</span>
-          <button id="nextBtn" class="btn-request" style="margin-top:0;" onclick="changePage(1)">Next →</button>
-      </div>
-
-      <div style="text-align: center; margin-top: 20px;">
-          <a href="#" style="color: #0071e3; text-decoration: none; font-size: 0.9rem; font-weight: 500;">↑ Back to Top</a>
-      </div>
    
 <script>
-// 1. State Variables (Starts completely empty now!)
+// 1. State Variables
 let archiveData = [];
 let filteredData = [];
 let currentPage = 1;
@@ -219,8 +222,5 @@ function requestDigitization(id, title) {
 // Trigger the data streaming operation immediately on boot
 loadArchiveData();
 </script>
-
-
-
 </body>
 </html>
